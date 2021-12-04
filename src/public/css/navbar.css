@@ -1,0 +1,68 @@
+
+.togglecolor {
+    background: linear-gradient(to right,rgb(208, 121, 209), rgb(219, 83, 83));
+    transition-duration: 0.5s;
+}
+
+.togglecolor:hover {
+    background: linear-gradient(to left,rgb(208, 121, 209), rgb(83, 153, 219));
+    transition: ease-in 1s;
+}
+
+.bg-options {
+    background: linear-gradient(to right,rgb(208, 121, 209), rgb(219, 83, 83));
+    transition-duration: 0.5s;
+}
+
+#navbar a {
+    color: lightgray;
+}
+
+#navbar {
+    transition-duration: 0.2s;
+}
+
+.navbarscroll {
+    background-color: rgb(35, 44, 53);
+    transition-duration: 0.5s;
+}
+
+#logo {
+    background: linear-gradient(to right, rgb(121, 163, 252), rgb(252, 89, 89));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.options a:hover {
+    background: linear-gradient(to left,rgb(208, 121, 209), rgb(83, 153, 219));
+    cursor: pointer;
+}
+
+.options {
+    background: linear-gradient(to right,rgb(150, 57, 151), rgb(219, 83, 83));
+}
+
+
+.purple {
+    color: rgb(255, 93, 117);
+}
+
+.account-circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: url('../imgs/angular-3.svg');
+    background-size: cover;
+    border: 2px 2px solid tomato;
+    transition: ease-in-out 0.5s;
+}
+
+.account-circle:hover {
+    transition: ease-in-out 0.5s;
+    transform: rotate(360deg);
+}
+
+.account-button {
+    background-color: transparent;
+    border: none;
+}

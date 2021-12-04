@@ -1,0 +1,54 @@
+<div class="d-flex flex-column justify-content-center align-items-center" id="formdiv">
+    {{#if message}}
+        <p class="alert alert-danger">{{message}}</p>
+    {{/if}}
+    <div class="d-flex align-items-center justify-content-center h-75 w-75 container-pai">
+        <div class="box-one column-content text-light h-100 w-75 text-center text-break d-flex flex-column justify-content-center align-items-center">
+            <h1 class="my-5">Login</h1>
+            <p>Já tem uma conta? Entre aqui.</p>
+            <a href="/login" class="btn btn-outline-light my-2">Fazer Login</a>
+        </div>
+        <div class="box-two h-100 w-100 overflow-auto d-flex flex-column justify-content-center">
+            <form action="/confirm" method="POST" class="d-flex flex-column align-items-center w-100 h-100 my-3">
+                <img src="https://img.icons8.com/ios-filled/500/fa314a/launchpad.png" width="140" height="140"/>
+                <h3 class="logologin">Rocket</h3>
+                <input type="text" name="login" placeholder="Login" class="input my-2 bg-dark text-light">
+                <input type="email" name="email" placeholder="Email" class="input my-2 bg-dark text-light">
+                <input type="text" name="name" placeholder="Nome" class="input my-2 bg-dark text-light">
+                <input type="password" name="password" placeholder="Senha" class="input my-2 bg-dark text-light">
+                <button type="submit" class="btnAnimate">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<!--<div class="d-flex flex-column justify-content-center align-items-center" id="formdiv">
+        <div class="box overflow-auto d-flex flex-column align-items-center justify-content-center shadow-lg rounded">
+            <div class="bg-danger text-primary w-100 linha rounded"></div>
+            <div class="d-flex justify-content-between flex-column topform">
+                <div class="text-center">
+                    <img src="https://img.icons8.com/nolan/256/launchpad.png" width="140" height="140"/><br>
+                    <h3 class="d-inline display-5 logologin">Rocket</h3><h4 class="d-inline display-5 px-3 text-muted">Account</h4>
+                    <h2 class="display-5 pt-4 text-light">Registrar-se</h2>
+                </div>
+            </div>
+            <form action="/confirm" method="POST" class="d-flex flex-column align-items-center formlog">
+                <div class="form-group campos px-4 py-2">
+                   <input type="text" class="form-control bg-dark text-light border-dark" name="login" placeholder="Login">
+                </div>
+                <div class="form-group campos px-4 py-2">
+                    <input type="text" class="form-control bg-dark text-light border-dark" name="email" aria-describedby="emailHelp" placeholder="Email">
+                </div>
+                <div class="form-group campos px-4 py-2">
+                    <input type="text" class="form-control bg-dark text-light border-dark" name="name" placeholder="Nome">
+                </div>
+             <div class="form-group campos px-4 py-2">
+                <input type="password" class="form-control bg-dark text-light border-dark" name="password" placeholder="Senha">
+                <input type="submit" class="btn btn-danger my-3 w-100" id="btnEntrar" value="Submit">
+            </div>
+            <p class="text-light">{{message}}</p>
+        </form>
+    </div>
+</div>
+-->

@@ -1,0 +1,8 @@
+.colorgradient {
+    background: linear-gradient(to right,rgb(195, 0, 255),rgb(63, 161, 252), rgb(0, 255, 221));
+}
+
+.separate {
+    border-radius: 10px;
+    border-color: rgb(163, 39, 39);
+}

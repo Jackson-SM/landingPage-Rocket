@@ -1,0 +1,247 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar">
+  <a class="navbar-brand" href="#home" id="logo"><img src="https://img.icons8.com/nolan/256/launchpad.png" width="60"
+      height="60" />Rocket VPS</a>
+  <button class="navbar-toggler togglecolor" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item btnUser btnOptions h-100 px-1">
+        <a class="nav-link text-center" href="/home">Home</a>
+      </li>
+      <li class="nav-item btnUser btnOptions h-100 px-1">
+        <a class="nav-link text-center" href="/purchase">Purchase</a>
+      </li>
+      <li class="nav-item btnUser btnOptions h-100 px-1">
+        <a class="nav-link text-center" href="/dominio">Dominio</a>
+      </li>
+      <li class="nav-item btnUser btnOptions h-100">
+        <a class="nav-link text-center" href="/hospedagem">Hospedagem</a>
+      </li>
+      <li class="nav-item btnUser btnOptions h-100 px-1">
+        <a class="nav-link text-center" href="/servidores">Servidores</a>
+      </li>
+    </ul>
+  </div>
+  <div class="collapse navbar-collapse d-xl-flex justify-content-end" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item dropdown mx-2">
+        {{#if session}}
+        {{#each posts}}
+        <div class="d-flex align-items-center mx-5">
+          <button class="nav-link dropdown-toggle account-button p-0 m-0 d-flex align-items-center"
+            id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="account-circle p-0 m-0">
+            </div>
+          </button>
+          <div class="dropdown-menu position-absolute text-center togglecolor p-1"
+            aria-labelledby="navbarDropdownMenuLink">
+            <a class="nav-link dropdown-toggle p-1 m-0" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Opções</a>
+            <div class="dropdown-menu position-absolute bg-options" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item text-light togglecolor" href="/delete/{{dataValues.id}}">Excluir<button
+                  type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></a>
+              <a class="dropdown-item text-light togglecolor" href="/logout/{{dataValues.id}}">Sair<button type="button"
+                  class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></a>
+            </div>
+          </div>
+        </div>
+  </div>
+  {{/each}}
+  {{else}}
+  <a href="/login" class="text-decoration-none text-light mx-2">Login</a>
+  <a href="/register" class="btn btn-primary">Registrar</a>
+  {{/if}}
+  </li>
+  </ul>
+  </div>
+</nav>
+<main>
+  <div class="imagem d-flex align-items-center justify-content-center">
+    <div class="jumbotron jumbotron-fluid bg-transparent text-light">
+      <div class="container d-flex flex-column align-items-center">
+        <h1 class="display-4 titlepag">Rocket VPS</h1>
+        <p class="lead">Melhores hostings e Domínios da America Latina. Conheça já nossos planos.</p>
+        <hr>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Veja Mais</a>
+      </div>
+    </div>
+  </div>
+  <div class="jumbotron jumbotron-fluid bg-light d-flex align-items-center m-auto pb-0">
+    <div class="container">
+      <h2 class="display-5 p-2">Segurança</h2>
+      <p class="lead">Fique seguro no momento de seu pagamento. A nossa empresa Rocket VPS pode proporcionar a devida
+        segurança para os nossos clientes com servidores seguros com criptografia de ultima geração e de ponta, podendo
+        transmitir segurança para nossos usuários com total confiança em nossos produtos, assim como temos confiança em
+        nossos clientes.
+      </p>
+    </div>
+    <img src="public/imgs/home/security.svg" class="img-fluid" width="700">
+  </div>
+  <div class="jumbotron jumbotron-fluid bg-light d-flex align-items-center m-auto pt-0">
+    <img src="public/imgs/home/database-girl.svg" class="img-fluid" width="650">
+    <div class="container">
+      <h2 class="display-5 p-2">Domínio</h2>
+      <p class="lead">Tenha total domínio sobre seus servidores podendo configura-los e mudar o sistema de acordo com
+        seu gosto. Também damos a opção de configurações de acordo com o seu plano de VPS e domínios, aonde você poderá
+        ter controle total sobre seus fluxos de dados e DataBases de modo facil e seguro.
+      </p>
+    </div>
+  </div>
+  <div class="jumbotron jumbotron-fluid bg-light d-flex align-items-center m-auto pt-0">
+    <div class="container">
+      <h2 class="display-5 p-2">Upload e Conexão</h2>
+      <p class="lead">Deixe seu dispositivo seguro com a Rocket VPN. Com a RocketVPS você terá domínio e controle sobre
+        seus servidores e dispositivos neles conectados, tendo observação total sobre o mesmo. Adiquirá já sua VPS para
+        garantir sua segurança.
+      </p>
+    </div>
+    <img src="public/imgs/home/database.svg" class="img-fluid" width="650">
+  </div>
+</main>
+<div class="tableplans d-lg-flex justify-content-center">
+  <table class="table table-borderless text-light text-center overflow-auto" id="tabelapreco">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col" class="py-4">VPS Basic</th>
+      <th scope="col" class="py-4">Vps Extended</th>
+      <th scope="col" class="py-4 tablerocketss tablerocketsstxt">RocketSS+</th>
+    </tr>
+    <tbody>
+      <tr>
+        <th scope="row" class="py-4">Velocidade</th>
+        <td scope="col" class="py-4">3.730+ Mbps</td>
+        <td scope="col" class="py-4">6.410+ Mbps</td>
+        <td scope="col" class="py-4 tablerocketss">10.980+ Mbps</td>
+      </tr>
+      <tr>
+        <th scope="row" class="py-4">Suporte</th>
+        <td scope="col" class="py-4">1 Máquina</td>
+        <td scope="col" class="py-4">3 Máquinas</td>
+        <td scope="col" class="py-4 tablerocketss">8 Máquinas</td>
+      </tr>
+      <tr>
+        <th scope="row" class="py-4">Sistema Operacional</th>
+        <td scope="col" class="py-4"><img src="https://img.icons8.com/color/30/000000/windows-10.png"
+            class="img-fluid px-2" /></td>
+        <td scope="col" class="py-4"><img src="https://img.icons8.com/color/30/000000/windows-10.png"
+            class="img-fluid px-2" />+<img src="https://img.icons8.com/color/30/000000/linux.png"></td>
+        <td scope="col" class="py-4 tablerocketss"><img src="https://img.icons8.com/color/30/000000/windows-10.png"
+            class="img-fluid px-2" />+<img src="https://img.icons8.com/color/30/000000/linux.png">+<img
+            src="https://img.icons8.com/color/32/000000/unix.png" />+<img
+            src="https://img.icons8.com/color/35/000000/mac-os.png" class="img-fluid px-2" /></td>
+      </tr>
+      <tr>
+        <th scope="row" class="py-4">Criptografia</th>
+        <td scope="col" class="py-4">Sha-345</td>
+        <td scope="col" class="py-4">Sha-402</td>
+        <td scope="col" class="tablerocketss py-2">Sha-450</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <th scope="row"></th>
+      <td><a class="btn btn-danger">Compre Já</a></td>
+      <td><a class="btn btn-danger">Compre Já</a></td>
+      <td class="tablerocketssbtn tablerocketss"><a class="btn btn-warning">Compre Já</a></td>
+    </tfoot>
+  </table>
+</div>
+<footer>
+  <div class="container d-flex align-items-center justify-content-around">
+    <p class="display 4 text-capitalize text-white-50 m-0">Baixe nosso aplicativo nas seguintes plataformas:</p>
+    <div>
+      <a href="https://play.google.com/store?hl=pt_BR&gl=US" target="_blank"><img
+          src="https://img.icons8.com/color/50/000000/google-play.png" class="px-1 plataformas" /></a>
+      <a href="https://www.apple.com/br/shop" target="_blank"><img
+          src="https://img.icons8.com/color/55/000000/apple-pay.png" class="px-1 plataformas" /></a>
+    </div>
+  </div>
+  <hr class="mb-5 mt-0 division">
+  <nav class="nav foot d-flex justify-content-around">
+    <ul class="navbar-nav navfooter d-flex justify-content-center flex-column">
+      <h5 class="fs-6 text-white-50">Informações</h5>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Atendimentos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sobre nós</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Serviços</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Hostings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Domínios</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav navfooter d-flex justify-content-center flex-column">
+      <h5 class="fs-6 text-white-50">Redes Sociais</h5>
+      <li class="nav-item">
+        <a class="nav-link active" href="#"><i class="fab fa-instagram"></i> Instagram</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fab fa-twitter"></i> Twitter</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fab fa-github"></i> Github</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fab fa-linkedin"></i> Linkedin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><i class="fab fa-facebook"></i> Facebook</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav navfooter d-flex justify-content-center flex-column">
+      <h5 class="fs-6 text-white-50">Informações</h5>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Atendimentos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sobre nós</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Serviços</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Hostings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Domínios</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav navfooter d-flex justify-content-center flex-column">
+      <h5 class="fs-6 text-white-50">Informações</h5>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Atendimentos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sobre nós</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Serviços</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Hostings</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Domínios</a>
+      </li>
+    </ul>
+  </nav>
+  <hr class="division">
+  <div class="container p-3 d-flex align-items-center justify-content-center">
+    <p class="display-6 font-italic text-white-50 m-0">Disponível para as plataformas:</p>
+    <div class="pl-4 ml-4">
+      <img src="https://img.icons8.com/color/30/000000/windows-10.png" class="img-fluid px-2 plataformas" />
+      <img src="https://img.icons8.com/color/30/000000/android-os.png" class="img-fluid px-2 plataformas" />
+      <img src="https://img.icons8.com/color/30/000000/mac-os.png" class="img-fluid px-2 plataformas" />
+      <img src="https://img.icons8.com/color/30/000000/linux.png" class="img-fluid px-2 plataformas" />
+    </div>
+  </div>
+  <p class="fs-6 text-white-50 m-0 p-3 text-center finnaly">Nos importamos com sua privacidade. Copyright © 2012–2021
+    RocketsVPS.com e Tefincom S.A.<br> support@rocketsVps.com</p>
+</footer>

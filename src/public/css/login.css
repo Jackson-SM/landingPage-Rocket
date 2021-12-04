@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: whitesmoke;
+}
+
+#formdiv {
+  width: 100%;
+  height: 100vh;
+  background-color: #161d24;
+}
+
+.btnAnimate {
+  outline: 0;
+  width: 30%;
+  height: 10%;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: white;
+  transition: .7s ease;
+  z-index: 1;
+}
+
+.btnAnimate::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(to left,#e93b3b,rgb(197, 57, 116));
+  z-index: -1;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.btnAnimate:hover {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.btnAnimate:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.container-pai {
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.column-content {
+  background: linear-gradient(to left, #eb4e4e, #83405a);
+  -webkit-transition: .4s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+form {
+  width: 100%;
+}
+
+.input {
+  width: 60% !important;
+  -webkit-transition: width 0.3s ease-in-out !important;
+  transition: width 0.3s ease-in-out !important;
+  background: transparent;
+}
+
+.input {
+  height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  outline: 0;
+  border: none;
+  border: 2px solid #3660d4;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+.input[name=login] {
+  background-image: url("../imgs/iconsLogin/login.png");
+  background-position: 3px 5px;
+  background-size: 22px;
+}
+
+.input[type=password] {
+  background-image: url("../imgs/iconsRegister/password.png");
+  background-position: 4px 6px;
+  background-size: 22px;
+}
+
+.input[name=name] {
+  background-image: url("../imgs/iconsRegister/name.png");
+  background-position: 3px 5px;
+  background-size: 22px;
+}
+
+.input[name=email] {
+  background-image:  url('../imgs/iconsRegister/email.png');
+  background-position: 3px 7px;
+  background-size: 19px;
+}
+
+.input:focus {
+  width: 80% !important;
+  border-color: #eb234e;
+}
+
+.box-two {
+  background: linear-gradient(to right, rgb(37, 37, 37),rgb(48, 60, 87));
+}
+
+.logologin {
+  background: linear-gradient(to right, #d82f2f, #b94760);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.logologin:hover {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  text-shadow: 0 0 20px #db4e7d;
+}
+/*# sourceMappingURL=login.css.map */
