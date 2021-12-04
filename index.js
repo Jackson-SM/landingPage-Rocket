@@ -128,5 +128,5 @@ app.get('/logout/:id', (req,res) => {
 })
 
 app.listen(3001, function(){
-    console.log('Servidor aberto na porta 3001')
+    console.log('Servidor aberto na porta 3001, Bem vindo')
 })
